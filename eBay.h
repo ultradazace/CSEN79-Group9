@@ -64,6 +64,7 @@ namespace ebay
         void addHistory(const Items &add);
         void startSelling() { isSeller = true; }
         void addInterest(Items* item) {interest.push_back(item);}
+        void removeInterest(Items* item);
         bool interested(const std::string& name) const;
         std::string getUsername() const { return username; }
 
@@ -93,6 +94,7 @@ namespace ebay
 }
 
 #endif
+
 
 
 
