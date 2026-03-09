@@ -1,5 +1,4 @@
 #include "ebay.h"
-#include <iostream>
 
 using namespace ebay;
 
