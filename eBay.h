@@ -60,10 +60,12 @@ namespace ebay
     public:
         User();
         ~User();
-        void setUsername(const std::string &u);
+        void setUsername(const std::string &u) {username = u;}
         void addHistory(const Items &add);
         void startSelling() { isSeller = true; }
-
+        void addInterest(Items* item) {interest.push_back(item);}
+        void showInterest();
+        bool interested(const std::string& name) const;
         std::string getUsername() const { return username; }
 
     private:
@@ -92,3 +94,4 @@ namespace ebay
 }
 
 #endif
+
