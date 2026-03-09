@@ -17,7 +17,7 @@ void Items::addBid(const std::string userName, const double bidAmount)
         highestBid = binPrice;
         winner = userName;
     }
-    else if (bidAmount >= highestBid)
+    else if (bidAmount >= highestBid) // if the new bid is higher than previous bids, add it to the list
     {
         highestBid = bidAmount;
         Bid newBid = Bid(userName, bidAmount);
