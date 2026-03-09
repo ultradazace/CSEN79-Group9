@@ -87,11 +87,12 @@ namespace ebay
 
     private:
         std::vector<Items> active_listings;          // Contains all items currently being auctioned
-        std::unordered_map<std::string, User> users; // This is for our collection of users
+        std::unordered_map<std::string, User> users; // This is for our collection of users. String here is for quick access with the username
         std::vector<std::string> logs;               // The logs of previous transactions
     };
 }
 
 #endif
+
 
 
