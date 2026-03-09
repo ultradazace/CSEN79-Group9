@@ -59,3 +59,18 @@ bool User::interested(const std::string& name) const
     }
     return false;
 }
+
+void User::removeInterest(Items* item)
+{
+    // precondition: item should be valid and interest should be pointing to an Items or nullptr
+    size_t i = 0;
+    while(i < interest.size())
+    {
+        if(interest[i] == item)
+        {
+            interest.erase(interest.begin() + i);   // Removes the item if it exists
+            return;
+        }
+        i++;
+    }
+}
